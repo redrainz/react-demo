@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-import {HashRouter,Route,Switch} from 'react-router-dom';
-import App from "./App";
+import {HashRouter, Route, Switch} from 'react-router-dom';
+import Index from "./page/Index";
 
 
-class Router extends React.Component{
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        fetch("",{body:{}})
-    }
+class Router extends React.Component {
 
     render() {
-        return(
+        return (
             <HashRouter>
                 <Switch>
-                    <Route path='/a' component={App}/>
+                    <Route path='/' component={Index}/>
                 </Switch>
             </HashRouter>
+
+
         );
     }
 }
